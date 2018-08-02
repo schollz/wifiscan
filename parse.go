@@ -77,7 +77,7 @@ func parseDarwin(output string) (wifis []Wifi, err error) {
 		if rssi > 0 {
 			continue
 		}
-		wifis = append(wifis, Wifi{SSID: fs[1], RSSI: rssi})
+		wifis = append(wifis, Wifi{SSID: strings.ToLower(fs[1]), RSSI: rssi})
 	}
 	return
 }
@@ -92,7 +92,7 @@ func parseLinux(output string) (wifis []Wifi, err error) {
 			if strings.Contains(line, "Address") {
 				fs := strings.Fields(line)
 				if len(fs) == 5 {
-					w.SSID = fs[4]
+					w.SSID = strings.ToLower(fs[4])
 				}
 			} else {
 				continue
