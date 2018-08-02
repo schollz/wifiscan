@@ -1,0 +1,560 @@
+
+Schnittstellenname : Drahtlosnetzwerkverbindung
+Momentan sind 8 Netzwerke sichtbar.
+
+SSID 1 :
+    Netzwerktyp             : Infrastruktur
+    Authentifizierung       : WPA2-Personal
+    Verschlüsselung         : CCMP
+    BSSIDD 1                 : 00:f2:8b:8c:a6:88
+         Signal             : 23%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 2                 : 00:f2:8b:8f:58:78
+         Signal             : 40%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 3                 : 00:f2:8b:8f:58:74
+         Signal             : 38%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 4                 : 00:f2:8b:8f:58:79
+         Signal             : 36%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 5                 : 00:f2:8b:8f:58:78
+         Signal             : 50%
+         Funktyp         : 802.11n
+         Kanal           : 36
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 6                 : 00:35:1a:90:56:0d
+         Signal             : 71%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 7                 : 00:35:1a:90:56:05
+         Signal             : 71%
+         Funktyp         : 802.11a
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 8                 : 00:35:1a:90:56:0e
+         Signal             : 58%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 9                 : 00:35:1a:90:56:08
+         Signal             : 58%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 10                 : 00:35:1a:90:56:0c
+         Signal             : 58%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 11                 : 00:35:1a:90:56:07
+         Signal             : 58%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 12                 : 00:35:1a:90:56:0b
+         Signal             : 58%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 13                 : 00:35:1a:90:56:06
+         Signal             : 58%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 14                 : 00:35:1a:5b:46:73
+         Signal             : 23%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 15                 : 00:35:1a:90:56:08
+         Signal             : 55%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 16                 : 00:35:1a:90:56:04
+         Signal             : 55%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 17                 : 00:35:1a:6f:0f:43
+         Signal             : 45%
+         Funktyp         : 802.11n
+         Kanal           : 6
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 18                 : 00:f2:8b:8f:58:72
+         Signal             : 36%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 19                 : 00:35:1a:6f:0f:47
+         Signal             : 43%
+         Funktyp         : 802.11n
+         Kanal           : 6
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 20                 : 00:f2:8b:8f:58:7e
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 36
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 21                 : 00:35:1a:5b:46:77
+         Signal             : 25%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 22                 : 00:35:1a:5b:46:77
+         Signal             : 21%
+         Funktyp         : 802.11n
+         Kanal           : 116
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 23                 : 00:35:1a:5b:46:7b
+         Signal             : 20%
+         Funktyp         : 802.11n
+         Kanal           : 116
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+
+SSID 2 : Network-1
+    Netzwerktyp             : Infrastruktur
+    Authentifizierung       : WPA-Personal
+    Verschlüsselung         : CCMP
+    BSSIDD 1                 : 10:bd:18:ab:4d:8f
+         Signal             : 38%
+         Funktyp         : 802.11g
+         Kanal           : 6
+         Basisraten (MBit/s) : 1 2 5.5 11
+         Andere Raten (MBit/s) : 6 9 12 18 24 36 48 54
+
+SSID 3 : Network-2
+    Netzwerktyp             : Infrastruktur
+    Authentifizierung       : WPA2-Personal
+    Verschlüsselung         : CCMP
+    BSSIDD 1                 : 00:35:1a:6f:0f:40
+         Signal             : 45%
+         Funktyp         : 802.11n
+         Kanal           : 6
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 2                 : 00:35:1a:90:56:00
+         Signal             : 55%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 3                 : 00:35:1a:90:56:0f
+         Signal             : 73%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 4                 : 00:35:1a:6f:0f:4f
+         Signal             : 50%
+         Funktyp         : 802.11n
+         Kanal           : 40
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 5                 : 00:f2:8b:8f:58:7f
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 36
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 6                 : 00:f2:8b:8f:58:70
+         Signal             : 38%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 7                 : 00:35:1a:5b:45:bf
+         Signal             : 23%
+         Funktyp         : 802.11n
+         Kanal           : 108
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 8                 : 00:35:1a:5b:46:7f
+         Signal             : 20%
+         Funktyp         : 802.11n
+         Kanal           : 116
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 9                 : 00:35:1a:5b:45:b0
+         Signal             : 25%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 10                 : 00:35:1a:5b:46:70
+         Signal             : 21%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 11                 : 00:f2:8b:8c:a6:80
+         Signal             : 21%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+
+SSID 4 : Network-3
+    Netzwerktyp             : Infrastruktur
+    Authentifizierung       : WPA2-Personal
+    Verschlüsselung         : CCMP
+    BSSIDD 1                 : 00:35:1a:6f:0f:46
+         Signal             : 45%
+         Funktyp         : 802.11n
+         Kanal           : 6
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 2                 : 00:35:1a:90:56:06
+         Signal             : 56%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 3                 : 00:35:1a:90:56:09
+         Signal             : 71%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 4                 : 00:35:1a:6f:0f:49
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 40
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 5                 : 00:f2:8b:8f:58:79
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 36
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 6                 : 00:f2:8b:8f:58:76
+         Signal             : 36%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 7                 : 00:35:1a:5b:46:79
+         Signal             : 18%
+         Funktyp         : 802.11n
+         Kanal           : 116
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 8                 : 00:35:1a:5b:45:b6
+         Signal             : 23%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 9                 : 00:35:1a:5b:45:b9
+         Signal             : 21%
+         Funktyp         : 802.11n
+         Kanal           : 108
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 10                 : 00:35:1a:5b:46:76
+         Signal             : 28%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 11                 : 00:f2:8b:8c:a6:86
+         Signal             : 25%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+
+SSID 5 : Network-4
+    Netzwerktyp             : Infrastruktur
+    Authentifizierung       : WPA2-Personal
+    Verschlüsselung         : CCMP
+    BSSIDD 1                 : 00:35:1a:6f:0f:4b
+         Signal             : 45%
+         Funktyp         : 802.11n
+         Kanal           : 6
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 2                 : 00:35:1a:90:56:0b
+         Signal             : 55%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 3                 : 00:35:1a:90:56:04
+         Signal             : 71%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 4                 : 00:35:1a:6f:0f:44
+         Signal             : 50%
+         Funktyp         : 802.11n
+         Kanal           : 40
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 5                 : 00:f2:8b:8f:58:74
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 36
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 6                 : 00:f2:8b:8f:58:7b
+         Signal             : 38%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 7                 : 00:35:1a:5b:46:7b
+         Signal             : 23%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 8                 : 00:35:1a:5b:46:74
+         Signal             : 20%
+         Funktyp         : 802.11n
+         Kanal           : 116
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 9                 : 00:35:1a:5b:45:b4
+         Signal             : 21%
+         Funktyp         : 802.11n
+         Kanal           : 108
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+
+SSID 6 : Network-5
+    Netzwerktyp             : Infrastruktur
+    Authentifizierung       : WPA2-Personal
+    Verschlüsselung         : CCMP
+    BSSIDD 1                 : 00:35:1a:6f:0f:4c
+         Signal             : 46%
+         Funktyp         : 802.11n
+         Kanal           : 6
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 2                 : 00:35:1a:90:56:0c
+         Signal             : 55%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 3                 : 00:35:1a:90:56:03
+         Signal             : 71%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 4                 : 00:35:1a:6f:0f:43
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 40
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 5                 : 00:f2:8b:8f:58:73
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 36
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 6                 : 00:f2:8b:8f:58:7c
+         Signal             : 36%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 7                 : 00:35:1a:5b:45:b3
+         Signal             : 21%
+         Funktyp         : 802.11n
+         Kanal           : 108
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 8                 : 00:35:1a:5b:46:73
+         Signal             : 18%
+         Funktyp         : 802.11n
+         Kanal           : 116
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 9                 : 00:35:1a:5b:46:7c
+         Signal             : 25%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 10                 : 00:f2:8b:8c:a6:8c
+         Signal             : 23%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+
+SSID 7 : Network-6
+    Netzwerktyp             : Infrastruktur
+    Authentifizierung       : WPA2-Personal
+    Verschlüsselung         : CCMP
+    BSSIDD 1                 : 00:35:1a:6f:0f:4d
+         Signal             : 45%
+         Funktyp         : 802.11n
+         Kanal           : 6
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 2                 : 00:35:1a:90:56:0d
+         Signal             : 55%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 3                 : 00:35:1a:90:56:02
+         Signal             : 71%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 4                 : 00:35:1a:6f:0f:42
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 40
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 5                 : 00:f2:8b:8f:58:72
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 36
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 6                 : 00:f2:8b:8f:58:7d
+         Signal             : 36%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 7                 : 00:35:1a:5b:46:7d
+         Signal             : 21%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 8                 : 00:35:1a:5b:45:b2
+         Signal             : 23%
+         Funktyp         : 802.11n
+         Kanal           : 108
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 9                 : 00:35:1a:5b:46:72
+         Signal             : 20%
+         Funktyp         : 802.11n
+         Kanal           : 116
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 10                 : 00:f2:8b:8c:a6:8d
+         Signal             : 25%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+
+SSID 8 : Network-7
+    Netzwerktyp             : Infrastruktur
+    Authentifizierung       : WPA2-Personal
+    Verschlüsselung         : CCMP
+    BSSIDD 1                 : 00:35:1a:6f:0f:45
+         Signal             : 45%
+         Funktyp         : 802.11n
+         Kanal           : 6
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 2                 : 00:35:1a:90:56:05
+         Signal             : 80%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 3                 : 00:35:1a:90:56:0a
+         Signal             : 71%
+         Funktyp         : 802.11n
+         Kanal           : 60
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 4                 : 00:35:1a:6f:0f:4a
+         Signal             : 50%
+         Funktyp         : 802.11n
+         Kanal           : 40
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 5                 : 00:f2:8b:8f:58:7a
+         Signal             : 48%
+         Funktyp         : 802.11n
+         Kanal           : 36
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 6                 : 00:f2:8b:8f:58:75
+         Signal             : 36%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 7                 : 00:35:1a:5b:46:75
+         Signal             : 23%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 8                 : 00:35:1a:5b:46:7a
+         Signal             : 20%
+         Funktyp         : 802.11n
+         Kanal           : 116
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 9                 : 00:35:1a:5b:45:b5
+         Signal             : 25%
+         Funktyp         : 802.11n
+         Kanal           : 11
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+    BSSIDD 10                 : 00:35:1a:5b:45:ba
+         Signal             : 21%
+         Funktyp         : 802.11n
+         Kanal           : 108
+         Basisraten (MBit/s) : 6 12 24
+         Andere Raten (MBit/s) : 9 18 36 48 54
+    BSSIDD 11                 : 00:f2:8b:8c:a6:85
+         Signal             : 21%
+         Funktyp         : 802.11n
+         Kanal           : 1
+         Basisraten (MBit/s) : 6
+         Andere Raten (MBit/s) : 9 12 18 24 36 48 54
+

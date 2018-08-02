@@ -1,0 +1,5 @@
+                            SSID BSSID             RSSI CHANNEL HT CC SECURITY (auth/unicast/group)
+                           Raupo 7c:b7:33:ae:3b:06 -80  64      Y  EU WPA(PSK/AES,TKIP/TKIP) WPA2(PSK/AES,TKIP/TKIP)
+                       gsy-97796 d4:d1:84:50:76:45 -79  11      Y  CH WPA(PSK/AES,TKIP/TKIP) WPA2(PSK/AES,TKIP/TKIP)
+                   visitor-18170 7c:b7:33:ae:3b:05 -76  9,-1    Y  EU WPA2(PSK/AES/AES)
+                   Visitor Raupo 7c:b7:33:ae:3b:04 -66  9,-1    Y  EU WPA(PSK/AES,TKIP/TKIP) WPA2(PSK/AES,TKIP/TKIP)

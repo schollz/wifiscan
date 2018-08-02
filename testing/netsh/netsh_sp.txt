@@ -1,0 +1,82 @@
+ 
+Nombre de interfaz : Conexi¢n de red inal mbrica 
+Actualmente hay 6 redes visibles. 
+
+SSID 1 : CARAMANZANAS_BAJA
+    Tipo de red             : Infraestructura
+    Autenticaci¢n           : WPA-Personal
+    Cifrado                 : TKIP 
+    BSSID 1             : 98:fc:11:b6:88:9e
+         Se¤al              : 28%  
+         Tipo de radio      : 802.11g
+         Canal              : 9 
+  Velocidades b sicas (Mbps): 1 2 5.5 11
+    Otras velocidades (Mbps): 6 9 12 18 24 36 48 54
+
+SSID 2 : EZCastec-59A02EBA
+    Tipo de red             : Infraestructura
+    Autenticaci¢n           : WPA2-Personal
+    Cifrado                 : CCMP 
+    BSSID 1             : a2:f4:59:a0:2e:ba
+         Se¤al              : 74%  
+         Tipo de radio      : 802.11n
+         Canal              : 8 
+  Velocidades b sicas (Mbps): 1 2 5.5 11
+    Otras velocidades (Mbps): 6 9 12 18 24 36 48 54
+
+SSID 3 : LOLOWL3
+    Tipo de red             : Infraestructura
+    Autenticaci¢n           : WPA2-Personal
+    Cifrado                 : CCMP 
+    BSSID 1             : 54:b8:0a:36:7e:0c
+         Se¤al              : 66%  
+         Tipo de radio      : 802.11n
+         Canal              : 11 
+  Velocidades b sicas (Mbps): 1 2 5.5 11
+    Otras velocidades (Mbps): 6 9 12 18 24 36 48 54
+
+SSID 4 : IKMGUEST
+    Tipo de red             : Infraestructura
+    Autenticaci¢n           : WPA2-Personal
+    Cifrado                 : CCMP 
+    BSSID 1             : e2:41:36:00:a7:50
+         Se¤al              : 76%  
+         Tipo de radio      : 802.11n
+         Canal              : 1 
+  Velocidades b sicas (Mbps): 1 2 5.5 11
+    Otras velocidades (Mbps): 6 9 12 18 24 36 48 54
+
+SSID 5 : LOLOWL
+    Tipo de red             : Infraestructura
+    Autenticaci¢n           : WPA2-Personal
+    Cifrado                 : CCMP 
+    BSSID 1             : 80:37:73:fd:14:a5
+         Se¤al              : 80%  
+         Tipo de radio      : 802.11n
+         Canal              : 6 
+  Velocidades b sicas (Mbps): 1 2 5.5 11
+    Otras velocidades (Mbps): 6 9 12 18 24 36 48 54
+    BSSID 2             : 80:37:73:fd:15:db
+         Se¤al              : 18%  
+         Tipo de radio      : 802.11n
+         Canal              : 6 
+  Velocidades b sicas (Mbps): 1 2 5.5 11
+    Otras velocidades (Mbps): 6 9 12 18 24 36 48 54
+    BSSID 3             : 00:14:7c:b0:83:a9
+         Se¤al              : 85%  
+         Tipo de radio      : 802.11g
+         Canal              : 9 
+  Velocidades b sicas (Mbps): 1 2 5.5 11
+    Otras velocidades (Mbps): 6 9 12 18 24 36 48 54
+
+SSID 6 : BOOWIFI
+    Tipo de red             : Infraestructura
+    Autenticaci¢n           : WPA2-Personal
+    Cifrado                 : TKIP 
+    BSSID 1             : 70:72:cf:af:51:e0
+         Se¤al              : 0%  
+         Tipo de radio      : 802.11g
+         Canal              : 1 
+  Velocidades b sicas (Mbps): 1 2 5.5 6 11 12 24
+    Otras velocidades (Mbps): 9 18 36 48 54
+
