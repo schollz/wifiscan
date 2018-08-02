@@ -11,6 +11,7 @@ import (
 
 var TimeLimit = 10 * time.Second
 
+// Scan will scan the optional interface for wifi access points
 func Scan(wifiInterface ...string) (wifilist []Wifi, err error) {
 	command := ""
 	os := ""

@@ -7,11 +7,15 @@ import (
 	"strings"
 )
 
+// Wifi is the data structure containing the basic
+// elements
 type Wifi struct {
 	SSID string `json:"ssid"`
 	RSSI int    `json:"rssi"`
 }
 
+// Parse will parse wifi output and extract the access point
+// information.
 func Parse(output, os string) (wifis []Wifi, err error) {
 	switch os {
 	case "windows":
