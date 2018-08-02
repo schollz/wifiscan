@@ -3,7 +3,6 @@ package wifiscan
 import (
 	"bufio"
 	"fmt"
-	"regexp"
 	"strconv"
 	"strings"
 )
@@ -26,8 +25,6 @@ func Parse(output, os string) (wifis []Wifi, err error) {
 	}
 	return
 }
-
-var macRegex, _ = regexp.Compile(`(?:[A-Fa-f0-9]{2}[:-]){5}(?:[A-Fa-f0-9]{2})`)
 
 func parseWindows(output string) (wifis []Wifi, err error) {
 	scanner := bufio.NewScanner(strings.NewReader(output))
