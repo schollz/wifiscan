@@ -45,3 +45,39 @@ func TestParseWindows(t *testing.T) {
 		assert.NotEmpty(t, ws)
 	}
 }
+
+func TestParseOSX(t *testing.T) {
+	pathToTest := "testing/airport"
+	files, err := ioutil.ReadDir(pathToTest)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, f := range files {
+		b, err := ioutil.ReadFile(path.Join(pathToTest, f.Name()))
+		if err != nil {
+			log.Fatal(err)
+		}
+		ws, err := Parse(string(b), "darwin")
+		assert.Nil(t, err)
+		assert.NotEmpty(t, ws)
+	}
+}
+
+func TestParseLinux(t *testing.T) {
+	pathToTest := "testing/iwlist"
+	files, err := ioutil.ReadDir(pathToTest)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, f := range files {
+		b, err := ioutil.ReadFile(path.Join(pathToTest, f.Name()))
+		if err != nil {
+			log.Fatal(err)
+		}
+		ws, err := Parse(string(b), "linux")
+		assert.Nil(t, err)
+		assert.NotEmpty(t, ws)
+	}
+}

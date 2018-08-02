@@ -17,9 +17,9 @@ func Parse(output, os string) (wifis []Wifi, err error) {
 	case "windows":
 		wifis, err = parseWindows(output)
 	case "darwin":
-
+		wifis, err = parseDarwin(output)
 	case "linux":
-
+		wifis, err = parseLinux(output)
 	default:
 		err = fmt.Errorf("%s is not a recognized OS", os)
 	}
@@ -51,6 +51,62 @@ func parseWindows(output string) (wifis []Wifi, err error) {
 					}
 					w.RSSI = (w.RSSI / 2) - 100
 				}
+			}
+		}
+		if w.SSID != "" && w.RSSI != 0 {
+			wifis = append(wifis, w)
+			w = Wifi{}
+		}
+	}
+	return
+}
+
+func parseDarwin(output string) (wifis []Wifi, err error) {
+	scanner := bufio.NewScanner(strings.NewReader(output))
+	wifis = []Wifi{}
+	for scanner.Scan() {
+		line := scanner.Text()
+		fs := strings.Fields(line)
+		if len(fs) < 6 {
+			continue
+		}
+		rssi, errParse := strconv.Atoi(fs[2])
+		if errParse != nil {
+			continue
+		}
+		if rssi > 0 {
+			continue
+		}
+		wifis = append(wifis, Wifi{SSID: fs[1], RSSI: rssi})
+	}
+	return
+}
+
+func parseLinux(output string) (wifis []Wifi, err error) {
+	scanner := bufio.NewScanner(strings.NewReader(output))
+	w := Wifi{}
+	wifis = []Wifi{}
+	for scanner.Scan() {
+		line := scanner.Text()
+		if w.SSID == "" {
+			if strings.Contains(line, "Address") {
+				fs := strings.Fields(line)
+				if len(fs) == 5 {
+					w.SSID = fs[4]
+				}
+			} else {
+				continue
+			}
+		} else {
+			if strings.Contains(line, "Signal level=") {
+				level, errParse := strconv.Atoi(strings.Split(strings.Split(strings.Split(line, "level=")[1], "/")[0], " dB")[0])
+				if errParse != nil {
+					continue
+				}
+				if level > 0 {
+					level = (level / 2) - 100
+				}
+				w.RSSI = level
 			}
 		}
 		if w.SSID != "" && w.RSSI != 0 {
