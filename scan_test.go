@@ -1,7 +1,7 @@
 package wifiscan
 
 import (
-	"log"
+	"strings"
 	"testing"
 	"time"
 
@@ -9,7 +9,13 @@ import (
 )
 
 func TestRunCommand(t *testing.T) {
-	stdout, stderr, err := runCommand(1*time.Second, "ls -lSh")
-	log.Println(stdout, stderr)
+	stdout, _, err := runCommand(1*time.Second, "echo hi")
+	assert.True(t, strings.Contains(stdout, "hi"))
 	assert.Nil(t, err)
+}
+
+func TestScan(t *testing.T) {
+	w, err := Scan()
+	assert.Nil(t, err)
+	assert.NotEmpty(t, w)
 }
