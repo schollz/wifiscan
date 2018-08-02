@@ -36,11 +36,14 @@ func parseWindows(output string) (wifis []Wifi, err error) {
 	for scanner.Scan() {
 		line := scanner.Text()
 		if w.SSID == "" {
-			mac := macRegex.FindString(line)
-			if mac != "" {
-				w.SSID = mac
+			if strings.Contains(line, "BSSID") {
+				fs := strings.Fields(line)
+				if len(fs) == 4 {
+					w.SSID = fs[3]
+				}
+			} else {
+				continue
 			}
-			continue
 		} else {
 			if strings.Contains(line, "%") {
 				fs := strings.Fields(line)
