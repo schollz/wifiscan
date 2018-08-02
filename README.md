@@ -5,7 +5,7 @@
 [![godocs](https://godoc.org/github.com/schollz/wifiscan?status.svg)](https://godoc.org/github.com/schollz/wifiscan) 
 
 
-A platform-independent WiFi scanning library for getting BSSID + RSSI from nearby access points.
+A platform-independent WiFi scanning library for getting BSSID + RSSI from nearby access points. It should work on most Linux installations as well as Windows and OS X.
 
 
 ## Install
