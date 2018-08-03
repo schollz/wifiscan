@@ -7,6 +7,9 @@
 
 A platform-independent WiFi scanning library for getting BSSID + RSSI from nearby access points. It should work on most Linux installations as well as Windows and OS X.
 
+## How does it work?
+
+*wifiscan* works by calling the OS-specific Wifi scan utility and parsing the output. For Linux this is `iwlist`, for Windows it is `netsh.exe` and for OS X it is `airport`. Other systems are not supported at the moment (although, as long as they are Linux-based I believe you can install `iwlist`).
 
 ## Install
 
@@ -26,6 +29,10 @@ You can also use the command-line tool as:
 
 ```
 $ wifiscan
+20:4e:7f:8e:4e:ec: -85
+f0:5c:19:a2:26:71: -88
+f0:5c:19:a2:28:51: -75
+...
 ```
 
 ## Contributing
