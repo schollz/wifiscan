@@ -23,17 +23,27 @@ You can use it in your Go code as:
 
 ```golang
 wifis, err := wifiscan.Scan()
+if err != nil {
+    log.Fatal(err)
+}
+for _, w := range wifis {
+    fmt.Println(w.SSID, w.RSSI)
+}
 ```
 
 You can also use the command-line tool as:
 
 ```
 $ wifiscan
-20:4e:7f:8e:4e:ec: -85
-f0:5c:19:a2:26:71: -88
-f0:5c:19:a2:28:51: -75
+SSID                RSSI
+f0:5c:19:a2:2a:01   -55
+28:c6:8e:75:6f:cf   -58
+f0:5c:19:a2:26:61   -72
+90:72:40:1c:b8:96   -69
 ...
 ```
+
+_Note:_ When using with Linux you will need to add `sudo` to get a full scan.
 
 ## Contributing
 
