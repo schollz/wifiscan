@@ -1,7 +1,7 @@
 # wifiscan
 
 [![go report card](https://goreportcard.com/badge/github.com/schollz/wifiscan)](https://goreportcard.com/report/github.com/schollz/wifiscan) 
-[![coverage](https://cover.run/go/github.com/schollz/wifiscan.svg)](https://gocover.io/github.com/schollz/wifiscan)
+[![coverage](https://img.shields.io/badge/coverage-87%25-brightgreen.svg)](https://gocover.io/github.com/schollz/wifiscan)
 [![godocs](https://godoc.org/github.com/schollz/wifiscan?status.svg)](https://godoc.org/github.com/schollz/wifiscan) 
 
 
