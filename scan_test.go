@@ -1,6 +1,7 @@
 package wifiscan
 
 import (
+	"os"
 	"strings"
 	"testing"
 	"time"
@@ -15,7 +16,7 @@ func TestRunCommand(t *testing.T) {
 }
 
 func TestScan(t *testing.T) {
-	w, err := Scan()
+	w, err := Scan(os.Getenv("WIFI"))
 	assert.Nil(t, err)
 	assert.NotEmpty(t, w)
 }

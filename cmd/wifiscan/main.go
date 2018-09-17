@@ -3,12 +3,13 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 
 	wifiscan "github.com/schollz/wifiscan"
 )
 
 func main() {
-	wifis, err := wifiscan.Scan()
+	wifis, err := wifiscan.Scan(os.Getenv("WIFI"))
 	if err != nil {
 		log.Fatal(err)
 	}

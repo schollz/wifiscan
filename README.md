@@ -34,7 +34,7 @@ for _, w := range wifis {
 You can also use the command-line tool as:
 
 ```
-$ wifiscan
+$ WIFI=wlan0 wifiscan
 SSID                RSSI
 f0:5c:19:a2:2a:01   -55
 28:c6:8e:75:6f:cf   -58
