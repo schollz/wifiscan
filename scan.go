@@ -21,15 +21,33 @@ func init() {
 // Scan will scan the optional interface for wifi access points
 func Scan(wifiInterface ...string) (wifilist []Wifi, err error) {
 	if runtime.GOOS == "linux" && (len(wifiInterface) == 0 || wifiInterface[0] == "") {
-		for _, in := range getInterfacesLinux() {
-			w, err := scan(in)
+		var interfaces []string
+		interfaces, err = getInterfacesLinux()
+		if err != nil {
+			log.Debug(err)
+			return
+		}
+		for _, in := range interfaces {
+			var w []Wifi
+			w, err = scan(in)
 			if len(w) > 0 {
 				wifilist = append(wifilist, w...)
 			}
 		}
 		if len(wifilist) > 0 {
 			err = nil
+			wifimap := make(map[string]Wifi)
+			for _, w := range wifilist {
+				wifimap[w.SSID] = w
+			}
+			i := 0
+			for _, w := range wifimap {
+				wifilist[i] = w
+				i++
+			}
+			wifilist = wifilist[:i]
 		}
+
 		return
 	}
 	return scan()
@@ -63,6 +81,7 @@ func scan(wifiInterface ...string) (wifilist []Wifi, err error) {
 	}
 	stdout, _, err := runCommand(TimeLimit, command)
 	if err != nil {
+		log.Debugf("error on '%s': %s", command, err)
 		log.Debug(stdout)
 		return
 	}
