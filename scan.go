@@ -50,7 +50,7 @@ func Scan(wifiInterface ...string) (wifilist []Wifi, err error) {
 
 		return
 	}
-	return scan()
+	return scan(wifiInterface...)
 }
 
 func scan(wifiInterface ...string) (wifilist []Wifi, err error) {
