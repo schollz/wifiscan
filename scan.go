@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os/exec"
 	"runtime"
+	"strconv"
 	"strings"
 	"time"
 
@@ -19,6 +20,22 @@ func init() {
 
 // Scan will scan the optional interface for wifi access points
 func Scan(wifiInterface ...string) (wifilist []Wifi, err error) {
+	if runtime.GOOS == "linux" && (len(wifiInterface) == 0 || wifiInterface[0] == "") {
+		for _, in := range getInterfacesLinux() {
+			w, err := scan(in)
+			if len(w) > 0 {
+				wifilist = append(wifilist, w...)
+			}
+		}
+		if len(wifilist) > 0 {
+			err = nil
+		}
+		return
+	}
+	return scan()
+}
+
+func scan(wifiInterface ...string) (wifilist []Wifi, err error) {
 	command := ""
 	os := ""
 	switch runtime.GOOS {
@@ -77,6 +94,35 @@ func runCommand(tDuration time.Duration, commands string) (stdout, stderr string
 	case err = <-done:
 		stdout = outb.String()
 		stderr = errb.String()
+	}
+	return
+}
+
+func getInterfacesLinux() (interfaces []string, err error) {
+	stdout, _, err := runCommand(TimeLimit, "ip address")
+	if err != nil {
+		return
+	}
+	return getInteracesFromString(stdout)
+}
+
+func getInteracesFromString(s string) (interfaces []string, err error) {
+	for _, line := range strings.Split(s, "\n") {
+		if !strings.Contains(line, "BROADCAST") {
+			continue
+		}
+		cols := strings.Split(line, ":")
+		if len(cols) < 3 {
+			continue
+		}
+		_, errConvert := strconv.Atoi(cols[0])
+		if errConvert != nil {
+			continue
+		}
+		if strings.Contains(cols[1], "@") || strings.Contains(cols[1], "docker") {
+			continue
+		}
+		interfaces = append(interfaces, strings.TrimSpace(cols[1]))
 	}
 	return
 }
