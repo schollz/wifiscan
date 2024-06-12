@@ -3,6 +3,7 @@ package wifiscan
 import (
 	"bufio"
 	"fmt"
+	"regexp"
 	"strconv"
 	"strings"
 )
@@ -10,8 +11,9 @@ import (
 // Wifi is the data structure containing the basic
 // elements
 type Wifi struct {
-	SSID string `json:"ssid"`
-	RSSI int    `json:"rssi"`
+	SSID  string `json:"ssid"`
+	BSSID string `json:"bssid"`
+	RSSI  int    `json:"rssi"`
 }
 
 // Parse will parse wifi output and extract the access point
@@ -21,9 +23,9 @@ func Parse(output, os string) (wifis []Wifi, err error) {
 	case "windows":
 		wifis, err = parseWindows(output)
 	case "darwin":
-		wifis, err = parseDarwin(output)
+		wifis = parseDarwin(output)
 	case "linux":
-		wifis, err = parseLinux(output)
+		wifis = parseLinux(output)
 	default:
 		err = fmt.Errorf("%s is not a recognized OS", os)
 	}
@@ -36,14 +38,12 @@ func parseWindows(output string) (wifis []Wifi, err error) {
 	wifis = []Wifi{}
 	for scanner.Scan() {
 		line := scanner.Text()
-		if w.SSID == "" {
+		if w.BSSID == "" {
 			if strings.Contains(line, "BSSID") {
 				fs := strings.Fields(line)
 				if len(fs) == 4 {
-					w.SSID = fs[3]
+					w.BSSID = fs[3]
 				}
-			} else {
-				continue
 			}
 		} else {
 			if strings.Contains(line, "%") {
@@ -57,49 +57,57 @@ func parseWindows(output string) (wifis []Wifi, err error) {
 				}
 			}
 		}
-		if w.SSID != "" && w.RSSI != 0 {
+		if strings.Contains(line, "SSID") && !strings.Contains(line, "BSSID") {
+			w.SSID = strings.Trim(line[strings.Index(line, ":")+1:], " ")
+		}
+		if w.BSSID != "" && w.RSSI != 0 {
 			wifis = append(wifis, w)
-			w = Wifi{}
+			w.BSSID = ""
+			w.RSSI = 0
 		}
 	}
+
 	return
 }
 
-func parseDarwin(output string) (wifis []Wifi, err error) {
+func parseDarwin(output string) []Wifi {
+	const _MAC_ADDRESS_REGEX string = "([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})"
+
 	scanner := bufio.NewScanner(strings.NewReader(output))
-	wifis = []Wifi{}
+	var wifis []Wifi = nil
 	for scanner.Scan() {
-		line := scanner.Text()
-		fs := strings.Fields(line)
-		if len(fs) < 6 {
+		line := strings.Trim(scanner.Text(), " ")
+
+		// To check if it's a valid line, check if there's a MAC address in it
+		if valid_line, err := regexp.MatchString(_MAC_ADDRESS_REGEX, line); err != nil || !valid_line {
 			continue
 		}
-		rssi, errParse := strconv.Atoi(fs[2])
-		if errParse != nil {
-			continue
-		}
-		if rssi > 0 {
-			continue
-		}
-		wifis = append(wifis, Wifi{SSID: strings.ToLower(fs[1]), RSSI: rssi})
+
+		var mac_regex *regexp.Regexp = regexp.MustCompile(_MAC_ADDRESS_REGEX)
+		var mac_loc []int = mac_regex.FindStringIndex(line)
+
+		var ssid string = strings.Trim(line[:mac_loc[0]], " ")
+		var bssid string = strings.Trim(line[mac_loc[0]:mac_loc[1]], " ")
+		rssi, _ := strconv.Atoi(strings.Trim(line[mac_loc[1]:mac_loc[1]+4], " "))
+
+		wifis = append(wifis, Wifi{SSID: ssid, BSSID: bssid, RSSI: rssi})
 	}
-	return
+
+	return wifis
 }
 
-func parseLinux(output string) (wifis []Wifi, err error) {
+func parseLinux(output string) []Wifi {
 	scanner := bufio.NewScanner(strings.NewReader(output))
 	w := Wifi{}
-	wifis = []Wifi{}
+	var wifis []Wifi = nil
 	for scanner.Scan() {
 		line := scanner.Text()
-		if w.SSID == "" {
+		if w.BSSID == "" {
 			if strings.Contains(line, "Address") {
 				fs := strings.Fields(line)
 				if len(fs) == 5 {
-					w.SSID = strings.ToLower(fs[4])
+					w.BSSID = strings.ToLower(fs[4])
 				}
-			} else {
-				continue
 			}
 		} else {
 			if strings.Contains(line, "Signal level=") {
@@ -113,10 +121,16 @@ func parseLinux(output string) (wifis []Wifi, err error) {
 				w.RSSI = level
 			}
 		}
-		if w.SSID != "" && w.RSSI != 0 {
+		if strings.Contains(line, "ESSID") {
+			var trimmed_line string = strings.Trim(line, " ")
+			w.SSID = strings.Trim(trimmed_line[strings.Index(trimmed_line, ":")+1:], " \"")
+		}
+		if w.BSSID != "" && w.RSSI != 0 {
 			wifis = append(wifis, w)
-			w = Wifi{}
+			w.BSSID = ""
+			w.RSSI = 0
 		}
 	}
-	return
+
+	return wifis
 }

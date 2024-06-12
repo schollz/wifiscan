@@ -38,7 +38,7 @@ func Scan(wifiInterface ...string) (wifilist []Wifi, err error) {
 			err = nil
 			wifimap := make(map[string]Wifi)
 			for _, w := range wifilist {
-				wifimap[w.SSID] = w
+				wifimap[w.BSSID] = w
 			}
 			i := 0
 			for _, w := range wifimap {

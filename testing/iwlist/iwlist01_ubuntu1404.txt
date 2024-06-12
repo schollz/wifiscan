@@ -56,7 +56,7 @@ wlan0     Scan completed :
                         Authentication Suites (1) : PSK
                     Signal level=88/100  
           Cell 05 - Address: 00:35:1A:90:56:04
-                    ESSID:"<hidden>"
+                    ESSID:""
                     Protocol:IEEE 802.11gn
                     Mode:Master
                     Frequency:2.412 GHz (Channel 1)

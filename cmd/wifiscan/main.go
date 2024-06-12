@@ -3,7 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-
 	log "github.com/schollz/logger"
 	wifiscan "github.com/schollz/wifiscan"
 )
@@ -29,6 +28,6 @@ func main() {
 		fmt.Println("no mac addresses found")
 	}
 	for _, w := range wifis {
-		fmt.Printf("%s\t%d\n", w.SSID, w.RSSI)
+		fmt.Printf("%s\t%s\t%d\n", w.SSID, w.BSSID, w.RSSI)
 	}
 }
