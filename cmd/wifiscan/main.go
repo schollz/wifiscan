@@ -23,7 +23,7 @@ func main() {
 		log.Error(err)
 	}
 	if len(wifis) > 0 {
-		fmt.Println("SSID\t\t\tRSSI")
+		fmt.Println("SSID\t\tBSSID\t\t\tRSSI")
 	} else {
 		fmt.Println("no mac addresses found")
 	}
