@@ -5,7 +5,7 @@
 [![godocs](https://godoc.org/github.com/schollz/wifiscan?status.svg)](https://godoc.org/github.com/schollz/wifiscan) 
 
 
-A platform-independent WiFi scanning library for getting BSSID + RSSI from nearby access points. It should work on most Linux installations as well as Windows and OS X.
+A platform-independent WiFi scanning library for getting SSID + BSSID + RSSI from nearby access points. It should work on most Linux installations as well as Windows and OS X.
 
 ## How does it work?
 
@@ -27,7 +27,7 @@ if err != nil {
     log.Fatal(err)
 }
 for _, w := range wifis {
-    fmt.Println(w.SSID, w.RSSI)
+    fmt.Println(w.SSID, w.BSSID, w.RSSI)
 }
 ```
 
@@ -35,11 +35,11 @@ You can also use the command-line tool as:
 
 ```
 $ WIFI=wlan0 wifiscan
-SSID                RSSI
-f0:5c:19:a2:2a:01   -55
-28:c6:8e:75:6f:cf   -58
-f0:5c:19:a2:26:61   -72
-90:72:40:1c:b8:96   -69
+SSID            BSSID                   RSSI
+NOS-618F        2c:a1:7d:69:61:8f       -98
+MEO-WiFi        1c:57:3e:28:07:62       -97
+MEO-WiFi        1c:57:3e:2b:de:12       -93
+MEO-WiFi        58:fc:20:b1:af:a2       -88
 ...
 ```
 
