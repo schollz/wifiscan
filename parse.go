@@ -23,12 +23,13 @@ func Parse(output, os string) (wifis []Wifi, err error) {
 	case "windows":
 		wifis, err = parseWindows(output)
 	case "darwin":
-		wifis = parseDarwin(output)
+		wifis, err = parseDarwin(output)
 	case "linux":
-		wifis = parseLinux(output)
+		wifis, err = parseLinux(output)
 	default:
 		err = fmt.Errorf("%s is not a recognized OS", os)
 	}
+
 	return
 }
 
@@ -70,16 +71,16 @@ func parseWindows(output string) (wifis []Wifi, err error) {
 	return
 }
 
-func parseDarwin(output string) []Wifi {
+func parseDarwin(output string) (wifis []Wifi, err error) {
 	const _MAC_ADDRESS_REGEX string = "([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})"
 
 	scanner := bufio.NewScanner(strings.NewReader(output))
-	var wifis []Wifi = nil
 	for scanner.Scan() {
 		line := strings.Trim(scanner.Text(), " ")
 
 		// To check if it's a valid line, check if there's a MAC address in it
-		if valid_line, err := regexp.MatchString(_MAC_ADDRESS_REGEX, line); err != nil || !valid_line {
+		var valid_line bool
+		if valid_line, err = regexp.MatchString(_MAC_ADDRESS_REGEX, line); err != nil || !valid_line {
 			continue
 		}
 
@@ -88,18 +89,18 @@ func parseDarwin(output string) []Wifi {
 
 		var ssid string = strings.Trim(line[:mac_loc[0]], " ")
 		var bssid string = strings.Trim(line[mac_loc[0]:mac_loc[1]], " ")
-		rssi, _ := strconv.Atoi(strings.Trim(line[mac_loc[1]:mac_loc[1]+4], " "))
+		var rssi int
+		rssi, err = strconv.Atoi(strings.Trim(line[mac_loc[1]:mac_loc[1]+4], " "))
 
 		wifis = append(wifis, Wifi{SSID: ssid, BSSID: bssid, RSSI: rssi})
 	}
 
-	return wifis
+	return
 }
 
-func parseLinux(output string) []Wifi {
+func parseLinux(output string) (wifis []Wifi, err error) {
 	scanner := bufio.NewScanner(strings.NewReader(output))
 	w := Wifi{}
-	var wifis []Wifi = nil
 	for scanner.Scan() {
 		line := scanner.Text()
 		if w.BSSID == "" {
@@ -111,8 +112,9 @@ func parseLinux(output string) []Wifi {
 			}
 		} else {
 			if strings.Contains(line, "Signal level=") {
-				level, errParse := strconv.Atoi(strings.Split(strings.Split(strings.Split(line, "level=")[1], "/")[0], " dB")[0])
-				if errParse != nil {
+				var level int
+				level, err = strconv.Atoi(strings.Split(strings.Split(strings.Split(line, "level=")[1], "/")[0], " dB")[0])
+				if err != nil {
 					continue
 				}
 				if level > 0 {
@@ -132,5 +134,5 @@ func parseLinux(output string) []Wifi {
 		}
 	}
 
-	return wifis
+	return
 }
