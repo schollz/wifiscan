@@ -1,8 +1,8 @@
 package wifiscan
 
 import (
-	"io/ioutil"
 	"log"
+	"os"
 	"path"
 	"testing"
 
@@ -11,32 +11,32 @@ import (
 
 func BenchmarkParseWindows(b *testing.B) {
 	pathToTest := "testing/netsh"
-	files, err := ioutil.ReadDir(pathToTest)
+	files, err := os.ReadDir(pathToTest)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	var output string
 	for _, f := range files {
-		bs, _ := ioutil.ReadFile(path.Join("testing/netsh", f.Name()))
+		bs, _ := os.ReadFile(path.Join("testing/netsh", f.Name()))
 		output = string(bs)
 		break
 	}
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
-		Parse(output, "windows")
+		_, _ = Parse(output, "windows")
 	}
 }
 
 func TestParseWindows(t *testing.T) {
 	pathToTest := "testing/netsh"
-	files, err := ioutil.ReadDir(pathToTest)
+	files, err := os.ReadDir(pathToTest)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, f := range files {
-		b, err := ioutil.ReadFile(path.Join(pathToTest, f.Name()))
+		b, err := os.ReadFile(path.Join(pathToTest, f.Name()))
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -48,13 +48,13 @@ func TestParseWindows(t *testing.T) {
 
 func TestParseOSX(t *testing.T) {
 	pathToTest := "testing/airport"
-	files, err := ioutil.ReadDir(pathToTest)
+	files, err := os.ReadDir(pathToTest)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, f := range files {
-		b, err := ioutil.ReadFile(path.Join(pathToTest, f.Name()))
+		b, err := os.ReadFile(path.Join(pathToTest, f.Name()))
 		if err != nil {
 			log.Fatal(err)
 		}
@@ -66,13 +66,13 @@ func TestParseOSX(t *testing.T) {
 
 func TestParseLinux(t *testing.T) {
 	pathToTest := "testing/iwlist"
-	files, err := ioutil.ReadDir(pathToTest)
+	files, err := os.ReadDir(pathToTest)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, f := range files {
-		b, err := ioutil.ReadFile(path.Join(pathToTest, f.Name()))
+		b, err := os.ReadFile(path.Join(pathToTest, f.Name()))
 		if err != nil {
 			log.Fatal(err)
 		}
